@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="progress-bar.css">
+	<script type="text/javascript" src="js/load.js"> </script>
+</head>
+<body onload="loadjs(); return false;">
+
+<div class="timer" id="timer">
+	<span style="position:relative;">
+		<span class="time" id="minutes">25</span>
+		<span class="colon">:</span>
+		<span class="time" id="seconds">00</span>
+	</span>
+	<div class="controls">
+		<span id="startstop" onclick="startstop(); return false;" class="btn btn-blue">Start</span>
+	</div>
+</div>
+
+<div class="progress" id="progress" style="visibility:hidden;">
+<div class="ui-progress-bar warning ui-container transition" id="progress_bar">
+	<div id="bar" class="ui-progress" style="width: 5%;">
+	  <span class="ui-label" style="display:none;">Break Time</span>
+	</div>
+</div>
+</div>
+
+<div class="explain" id="explanation">
+	<p>Work more efficiently with the 
+		<a href="http://www.pomodorotechnique.com/" 
+		target="_blank">Pomodoro technique</a></p>
+	<div class="step" id="step1">
+		<div>Work on your tasks for</div>
+		<span>25</span>
+		<div>minutes</div>
+	</div>
+	<div class="step" id="step2">
+		<div>Rest every 25 minutes for</div>
+		<span>5</span>
+		<div>minutes</div>
+	</div>
+	<div class="step" id="step3">
+		<div>Rest every 2 hours for</div>
+		<span>15</span>
+		<div>minutes</div>
+	</div>
+
+
+</div>
+
+<footer>
+	Follow me <a target="_blank" href="https://twitter.com/#!/ryhanhassan">@ryhanhassan</a>
+</footer>
+
+<!-- This is the right way to play sounds -->
+<audio id="ding" src="ding.mp3" preload="auto" autobuffer></audio>
+<audio id="dingling" src="dingling.mp3" preload="auto" autobuffer></audio>
+
+<!-- This is the wrong way way. Guess which way I'm using -->
+<span id="sounds"></span>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29614316-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
